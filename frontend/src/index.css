@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #22254b;
+  color: white;
+  font-size: 'Poppins', sans-serif;
+  margin: 0;
+}
+header {
+  background-color: #373b69;
+  padding: 1rem;
+  align-items: center;
+}
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.5rem;
+  align-items: center;
+}
+.title {
+  font-size: 30px;
+}
+.search {
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: 2px solid #22254b;
+  background-color: transparent;
+  color: white;
+  padding: 7px 15px;
+  margin: 0px 10px;
+}
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.movie {
+  background-color: #373b69;
+  margin: 1rem;
+  width: 250px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.movie img {
+  max-width: 100%;
+}
+.movie-info {
+  display: flex;
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.movie-title {
+  margin: 0;
+  font-size: 15px;
+}
+
+.movie-over {
+  position: absolute;
+  background-color: white;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #22254b;
+  padding: 1rem;
+  transform: translateY(102%);
+  transition: 0.3s ease-in-out;
+}
+.movie:hover .movie-over {
+  transform: translateY(0%);
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: ' ';
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid grey;
+  border-color: grey transparent grey transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.movie-title:hover {
+  font-size: larger;
+}
