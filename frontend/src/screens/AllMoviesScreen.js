@@ -58,6 +58,7 @@ const AllMoviesScreen = ({ history }) => {
     const newFavouriteList = [...favourites, movie]
     setFavourites(newFavouriteList)
     saveToLocalStorage(newFavouriteList)
+    alert('Added to Favourites!!!!')
   }
 
   const removeFavouriteMovie = (movie) => {
